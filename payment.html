@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Summer Fruits Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load cart items and calculate total price
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            let totalPrice = 0;
+
+            cartItems.forEach(item => {
+                totalPrice += item.price * item.quantity;
+            });
+
+            document.getElementById('total-amount').textContent = "Total Amount: BDT " + totalPrice;
+        });
+
+        function processPayment(event) {
+            event.preventDefault();
+            
+            const bkashNumber = document.getElementById('bkash-number').value;
+            const transactionId = document.getElementById('transaction-id').value;
+
+            if (bkashNumber && transactionId) {
+                alert("Payment successful! Your order is placed. Your transaction ID is " + transactionId);
+                localStorage.removeItem('cart');
+                window.location.href = 'index.html';
+            } else {
+                alert("Please complete all fields to process payment.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Fruit Store</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="payment-section">
+        <h2>Payment with bKash</h2>
+        <div id="total-amount"></div>
+        <form onsubmit="processPayment(event)">
+            <label for="bkash-number">bKash Number:</label>
+            <input type="tel" id="bkash-number" name="bkash-number" placeholder="Enter your bKash number" required>
+
+            <label for="transaction-id">Transaction ID:</label>
+            <input type="text" id="transaction-id" name="transaction-id" placeholder="Enter transaction ID" required>
+
+            <button type="submit">Confirm Payment</button>
+        </form>
+    </section>
+</body>
+</html>

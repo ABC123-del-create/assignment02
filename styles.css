@@ -1,0 +1,370 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('bb.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header {
+    background-color: black; 
+    color: #fff;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #ffcc00;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.menu a:hover {
+    border-color: #ffcc00;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-cart input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.search-cart .cart-icon, .search-cart .account-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #ffcc00; 
+}
+
+.hero-section {
+    background: rgba(17, 17, 17, 0.8);
+    padding: 100px 20px;
+    text-align: center;
+    background: url('images/hero-background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero-text h1 {
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #ffa500;
+}
+
+.products-section {
+    background: rgba(36, 34, 34, 0.459);
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+h2 {
+    color: #ff6600;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 253, 253);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffa500;
+}
+.bgc{
+    background-color: rgb(39, 38, 38);
+    width: 300px;
+    border-radius: 30%;
+}
+.footer { 
+    width: relative;
+    color: white;
+    background-color: #343436; 
+    padding: 10px; 
+    text-align: center; 
+}
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.cart-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cart-modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cart-modal .close:hover,
+.cart-modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    margin: 10px 0;
+}
+
+/* Profile Page */
+.profile-section, .signup-section, .products-section {
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.profile-section h2, .signup-section h2, .products-section h2 {
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+/* Signup Form Styling */
+.signup-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-section label, .signup-section input, .signup-section button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.signup-section button {
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.signup-section button:hover {
+    background-color: #ffa500;
+}
+/* Payment Section */
+.payment-section {
+    padding: 40px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 253, 253);
+}
+
+.payment-section h2 {
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+/* Payment Form Styling */
+.payment-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment-section label {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.payment-section input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.payment-section button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.payment-section button:hover {
+    background-color: #ffa500;
+}
+
+/* Total Amount Styling */
+#total-amount {
+    color: #ff6600;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+
+/* Login Section */
+.login-section {
+    padding: 40px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 253, 253);
+}
+
+.login-section h2 {
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+/* Login Form Styling */
+.login-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-section label {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.login-section input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.login-section button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.login-section button:hover {
+    background-color: #ffa500;
+}
+
+/* Sign Up Link Styling */
+.login-section p {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.login-section a {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.login-section a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Summer Fruits Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const profileInfo = document.getElementById('profile-info');
+            const notSignedUp = document.getElementById('not-signed-up');
+            
+            const user = JSON.parse(localStorage.getItem('user'));
+            
+            if (user) {
+                profileInfo.innerHTML = `
+                    <p><strong>Name:</strong> ${user.name}</p>
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <p><strong>Username:</strong> ${user.username}</p>
+                `;
+                notSignedUp.style.display = 'none';
+            } else {
+                profileInfo.style.display = 'none';
+            }
+        });
+
+        function editProfile() {
+            alert("Profile editing functionality can be added here.");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Fruit Store</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="profile-section">
+        <h2>User Profile</h2>
+        <div id="not-signed-up">
+            <p>Please sign up first to view your profile.</p>
+            <a href="signup.html"><button>Sign Up</button></a>
+        </div>
+        <div id="profile-info"></div>
+    </section>
+</body>
+</html>
